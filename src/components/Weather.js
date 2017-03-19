@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Weather extends React.Component{
+class Weather extends React.Component{
 	render(){
 		if(Object.getOwnPropertyNames(this.props.weather).length === 0){
 			return(<div></div>)
@@ -20,3 +20,5 @@ export default class Weather extends React.Component{
 		)
 	}
 }
+
+export default Weather;
