@@ -7,11 +7,11 @@ class Header extends React.Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        Hello React!
+                        Title
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav>
-                    <NavItem href="#">Hello</NavItem>
+                    <NavItem href="#">Hey Y'all</NavItem>
                 </Nav>
             </Navbar>
         );

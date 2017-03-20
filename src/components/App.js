@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Grid, Row, Col } from  'react-bootstrap';
+import { Grid, Row, Col, Jumbotron, Button } from  'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -29,30 +29,20 @@ class App extends React.Component{
 				<Header/>
 				<Grid>
 					<Row>
-						<Col xs={6} md={6}>
-							<h1>WeatherCheck</h1>
+						<Col xs={6} sm={6} md={6} lg={6}>
+							<Jumbotron>
+								<h1>Hello, world!</h1>
+								<p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+								<p><Button bsStyle="primary">Learn more</Button></p>
+							</Jumbotron>
+						</Col>
+						<Col xs={3} sm={3} md={3} lg={3}>
 							<Weather weather={weather} />
-							<LocationForm onLocationChange = {this.onLocationChange.bind(this)} />
 						</Col>
 					</Row>
 				</Grid>
 			</div>
-			/*
-			<div className="container">
-				<div className="row">
-					<div className="text-center col-md-6 col-md-offset-3">
-						<h1>WeatherCheck</h1>
-						<Weather weather={weather} />
-						<LocationForm onLocationChange = {this.onLocationChange.bind(this)} />
-					</div>
-				</div>
-			</div>
-			*/
 		)
-	}
-
-	onLocationChange(location){
-		this.props.dispatch(fetchWeather({city: location.city, state: location.state}));
 	}
 }
 
