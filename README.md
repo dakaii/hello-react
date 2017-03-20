@@ -1,4 +1,4 @@
-# hello-react
+# hello-react (React & Redux boilerplate)
 Run with
 ```
 npm start
